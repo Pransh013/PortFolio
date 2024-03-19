@@ -19,7 +19,7 @@ const Cursor = ({
   const [isHovered, setIsHovered] = useState(false);
   const [isHoveredOnText, setIsHoveredOnText] = useState(false);
   const cursorRef = useRef<HTMLDivElement>(null);
-  const cursorSize = isHovered || isHoveredOnText ? 75 : 16;
+  const cursorSize = isHovered || isHoveredOnText ? 75 : 18;
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),

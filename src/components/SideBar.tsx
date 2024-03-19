@@ -13,16 +13,16 @@ const navItems: NavItem[] = [
     href: "/",
   },
   {
-    title: "Work",
-    href: "/work",
+    title: "Skills",
+    href: "/#skills",
   },
   {
-    title: "About",
-    href: "/about",
+    title: "Projects",
+    href: "/#projects",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "/#contact",
   },
 ];
 
@@ -56,11 +56,12 @@ const SideBar = forwardRef<HTMLDivElement, HoverTextProps>((_, ref) => {
       }}
       animate={controls}
       initial={false}
-      className="bg-white w-1/4 h-screen fixed z-50 top-0 text-black right-0 mix-blend-difference flex items-center justify-center"
+      className="bg-white gh-regular w-1/4 h-screen fixed z-50 top-0 text-black right-0 mix-blend-difference flex items-center justify-center"
     >
       <div className="flex flex-col gap-12 bg-white px-8 py-6" ref={ref}>
         {navItems.map((data, index) => (
-          <motion.p
+          <motion.a
+            href={data.href}
             variants={{
               open: {
                 transform: "translateX(0%)",
@@ -77,7 +78,7 @@ const SideBar = forwardRef<HTMLDivElement, HoverTextProps>((_, ref) => {
             key={index}
           >
             {data.title}
-          </motion.p>
+          </motion.a>
         ))}
       </div>
     </motion.div>

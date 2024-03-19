@@ -1,18 +1,29 @@
-import { forwardRef } from "react";
+import { useContext } from "react";
+import Resume from "../assets/Pranshu_Verma_resumeM.pdf";
+import { SideBarContext } from "@/contexts/SideBarContext";
+import { CloudDownload } from "lucide-react";
 
-interface HeaderProps {}
-
-const Header = forwardRef<HTMLDivElement, HeaderProps>((_, ref) => {
+const Header = () => {
+  const { isOpen } = useContext(SideBarContext);
   return (
-    <div className="w-full px-24 border border-black flex items-center mix-blend-difference py-12">
-      <div
-        className="gh-regular text-2xl mix-blend-difference text-white"
-        ref={ref}
-      >
+    <div
+      className={`w-full gh-regular px-36 pr-60 border border-white flex justify-between items-center mix-blend-difference py-12 absolute ${
+        isOpen ? "z-20" : "z-30"
+      } `}
+    >
+      <div className=" text-4xl mix-blend-difference text-white">
         Pranshu Verma
       </div>
+      <a
+        className="text-2xl mix-blend-difference text-white flex items-center gap-3"
+        href={Resume}
+        download
+      >
+        <p>Resume</p>
+        <CloudDownload />
+      </a>
     </div>
   );
-});
+};
 
 export default Header;
