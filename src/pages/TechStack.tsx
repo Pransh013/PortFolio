@@ -7,7 +7,7 @@ const TechStack = () => {
   return (
     <div
       id="skills"
-      className="w-full dark:bg-black py-12 bg-[#F5F5F5] dark:bg-dot-white/[0.25] bg-dot-black/[0.2] relative flex flex-col items-center justify-center"
+      className="w-full dark:bg-black py-12 bg-[#F5F5F5] dark:bg-dot-white/[0.25] bg-dot-black/[0.2] relative flex flex-col items-center justify-center z-10"
     >
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"></div>
       <motion.p
