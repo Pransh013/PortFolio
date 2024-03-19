@@ -3,6 +3,7 @@ import { SideBarContext } from "@/contexts/SideBarContext";
 import projects from "@/lib/config";
 import { useContext } from "react";
 import { motion } from "framer-motion";
+import { skillsAnimate } from "@/lib/Animate";
 
 const Projects = () => {
   const { isOpen } = useContext(SideBarContext);
@@ -13,10 +14,7 @@ const Projects = () => {
     >
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"></div>
       <motion.p
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0 }}
-        transition={{ ease: "easeOut", duration: 1 }}
+        {...skillsAnimate}
         className="text-4xl sm:text-7xl font-bold relative z-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 py-8"
       >
         PROJECTS

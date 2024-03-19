@@ -88,3 +88,17 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #7878a3;
 }
+
+.container {
+  @apply flex;
+}
+
+svg {
+  @apply h-12 p-12 text-custom-color transition-colors duration-200 cursor-pointer;
+}
+
+@layer utilities {
+  .text-custom-color {
+    color: #c8bdb0;
+  }
+}
