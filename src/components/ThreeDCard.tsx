@@ -14,7 +14,7 @@ export function ThreeDCard({
   githubUrl: string;
 }) {
   return (
-    <CardContainer className="w-[33rem]">
+    <CardContainer className="w-[33rem] gh-regular">
       <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[#141414] dark:border-white/[0.2] border-black/[0.5] w-auto sm:w-[25rem] h-[25rem] rounded-xl px-4 py-3 border">
         <CardItem
           translateZ="50"

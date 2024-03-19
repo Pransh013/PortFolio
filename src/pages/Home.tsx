@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import ProfileCard from "@/components/ProfileCard";
 import TextEffect from "@/components/TextEffect";
 import { BackgroundBeams } from "@/components/ui/background-beams";
@@ -13,7 +14,8 @@ interface HoverTextProps {}
 
 const Home = forwardRef<HTMLParagraphElement, HoverTextProps>((_, ref) => {
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative custom-scrollbar">
+      <Header ref={ref} />
       <div className="px-24 w-full h-full absolute z-20 flex items-center gap-24">
         <div className="h-full">
           <ProfileCard />

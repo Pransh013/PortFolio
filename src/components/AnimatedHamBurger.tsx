@@ -84,7 +84,7 @@ const AnimatedHamBurger = forwardRef<HTMLDivElement, AnimatedHamBurgerProps>(
           />
           <div
             ref={ref}
-            className="absolute left-0 top-0 z-50 w-full h-full pointer-events-auto group-hover:scale-[2]"
+            className="absolute left-0 top-0 z-50 w-full h-full pointer-events-auto group-hover:scale-[1.8]"
           ></div>
         </motion.button>
       </MotionConfig>

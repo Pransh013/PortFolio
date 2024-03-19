@@ -46,7 +46,7 @@ const SideBar = forwardRef<HTMLDivElement, HoverTextProps>((_, ref) => {
         open: {
           transform: "translateX(0%)",
           transition: {
-            ease: [0.08, 0.65, 0.53, 0.96],
+            ease: [0.08, 0.65, 0.53, 0.56],
             duration: 0.6,
           },
         },
