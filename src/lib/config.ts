@@ -1,5 +1,4 @@
 import Gemini from "../assets/Gemini.png";
-import Swiggy from "../assets/Swiggy.png";
 import HtmlLogo from "../assets/html.png";
 import CssLogo from "../assets/css-3.png";
 import JsLogo from "../assets/js.png";
