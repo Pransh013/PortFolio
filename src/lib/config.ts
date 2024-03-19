@@ -27,7 +27,7 @@ const projects = [
   {
     title: "Swiggy Clone",
     description: "A google Gemini Clone built in React and TypeScript",
-    image: Swiggy,
+    image: Gemini,
     liveDemoUrl: "https://gemini-clone-pr.vercel.app/",
     githubUrl: "https://github.com/Pransh013/Gemini-Clone",
   },
