@@ -1,16 +1,19 @@
 import Gemini from "../assets/Gemini.png";
+import Swiggy from "../assets/Swiggy.png";
 import HtmlLogo from "../assets/html.png";
 import CssLogo from "../assets/css-3.png";
 import JsLogo from "../assets/js.png";
 import ReactSvg from "../assets/react.svg";
 import TailwindSvg from "../assets/tailwindcss.svg";
-import SassSvg from "../assets/sass.svg";
 import TypeScriptSvg from "../assets/typescript.svg";
 import NodeJsSvg from "../assets/nodejs.svg";
 import GitSvg from "../assets/git.svg";
 import MongoDbSvg from "../assets/mongodb.svg";
 import ExpressJsSvg from "../assets/express.svg";
 import JavaSvg from "../assets/java.svg";
+import CPP from "../assets/cpp.svg";
+import PostgreSQL from "../assets/postgresql.svg";
+import Prisma from "../assets/prisma.svg";
 
 const projects = [
   {
@@ -22,9 +25,9 @@ const projects = [
     githubUrl: "https://github.com/Pransh013/Gemini-Clone",
   },
   {
-    title: "Gemini Clone",
+    title: "Swiggy Clone",
     description: "A google Gemini Clone built in React and TypeScript",
-    image: Gemini,
+    image: Swiggy,
     liveDemoUrl: "https://gemini-clone-pr.vercel.app/",
     githubUrl: "https://github.com/Pransh013/Gemini-Clone",
   },
@@ -48,24 +51,16 @@ export default projects;
 
 export const SkillsInfo = [
   {
-    name: "Html",
+    name: "HTML",
     Logo: HtmlLogo,
   },
   {
-    name: "Css",
+    name: "CSS",
     Logo: CssLogo,
   },
   {
-    name: "Tailwindcss",
+    name: "TailwindCSS",
     Logo: TailwindSvg,
-  },
-  {
-    name: "Sass",
-    Logo: SassSvg,
-  },
-  {
-    name: "Git",
-    Logo: GitSvg,
   },
   {
     name: "JavaScript",
@@ -76,24 +71,39 @@ export const SkillsInfo = [
     Logo: TypeScriptSvg,
   },
   {
-    name: "React",
+    name: "ReactJS",
     Logo: ReactSvg,
   },
   {
-    name: "NodeJs",
+    name: "NodeJS",
     Logo: NodeJsSvg,
   },
-
   {
-    name: "MongoDb",
+    name: "ExpressJS",
+    Logo: ExpressJsSvg,
+  },
+  {
+    name: "MongoDB",
     Logo: MongoDbSvg,
   },
   {
-    name: "ExpressJs",
-    Logo: ExpressJsSvg,
+    name: "PostgreSQL",
+    Logo: PostgreSQL,
+  },
+  {
+    name: "Prisma",
+    Logo: Prisma,
+  },
+  {
+    name: "Git",
+    Logo: GitSvg,
   },
   {
     name: "Java",
     Logo: JavaSvg,
+  },
+  {
+    name: "C++",
+    Logo: CPP,
   },
 ];
