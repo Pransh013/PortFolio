@@ -7,7 +7,7 @@ const Header = () => {
   const { isOpen } = useContext(SideBarContext);
   return (
     <div
-      className={`w-full gh-regular px-36 pr-60 border border-white flex justify-between items-center mix-blend-difference py-12 absolute ${
+      className={`w-full gh-regular px-36 pr-60 flex justify-between items-center mix-blend-difference py-10 absolute ${
         isOpen ? "z-20" : "z-30"
       } `}
     >
@@ -15,7 +15,7 @@ const Header = () => {
         Pranshu Verma
       </div>
       <a
-        className="text-2xl mix-blend-difference text-white flex items-center gap-3"
+        className="text-2xl text-white flex items-center gap-3"
         href={Resume}
         download
       >

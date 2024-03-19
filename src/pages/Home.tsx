@@ -14,7 +14,7 @@ interface HoverTextProps {}
 
 const Home = forwardRef<HTMLParagraphElement, HoverTextProps>((_, ref) => {
   return (
-    <div id="home" className="w-full h-screen relative custom-scrollbar">
+    <div id="home" className="w-full h-screen relative">
       <Header />
       <div className="px-24 w-full h-full absolute z-20 flex items-center gap-24">
         <div className="h-full">

@@ -89,7 +89,7 @@
   background: #7878a3;
 }
 
-.container {
+/* .container {
   @apply flex;
 }
 
@@ -101,4 +101,4 @@ svg {
   .text-custom-color {
     color: #c8bdb0;
   }
-}
+} */

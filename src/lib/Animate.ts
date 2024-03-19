@@ -1,6 +1,6 @@
 export const skillsAnimate = {
   initial: {
-    y: "-100%",
+    y: "-80%",
     opacity: 0,
   },
   transition: {

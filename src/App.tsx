@@ -14,7 +14,7 @@ const App = () => {
   const stickyText2 = useRef(null);
   return (
     <>
-      <main className="w-full h-screen dark:bg-black bg-[#F5F5F5] relative custom-scrollbar">
+      <main className="w-full h-screen dark:bg-black bg-[#F5F5F5] relative">
         <Cursor
           stickyElement={stickyElement}
           stickyText={stickyText}
@@ -23,7 +23,7 @@ const App = () => {
         <div className="absolute z-30">
           <SideBar ref={stickyText} />
         </div>
-        <div className="z-50 mix-blend-difference fixed right-12 top-6">
+        <div className="z-50 mix-blend-difference fixed right-10 top-5">
           <MagneticEffect>
             <AnimatedHamBurger ref={stickyElement} />
           </MagneticEffect>
