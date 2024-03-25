@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import ProfileCard from "@/components/ProfileCard";
 import TextEffect from "@/components/TextEffect";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import { Stars } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import React, { forwardRef } from "react";
 
 const sentences = [
@@ -15,6 +16,11 @@ interface HoverTextProps {}
 const Home = forwardRef<HTMLParagraphElement, HoverTextProps>((_, ref) => {
   return (
     <div id="home" className="w-full h-screen relative">
+      <div className="absolute inset-0 z-0">
+        <Canvas>
+          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+        </Canvas>
+      </div>
       <Header />
       <div className="px-24 w-full h-full absolute z-20 flex items-center gap-24">
         <div className="h-full">
@@ -36,7 +42,6 @@ const Home = forwardRef<HTMLParagraphElement, HoverTextProps>((_, ref) => {
           ))}
         </p>
       </div>
-      <BackgroundBeams />
     </div>
   );
 });
