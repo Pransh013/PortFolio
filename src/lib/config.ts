@@ -106,3 +106,27 @@ export const SkillsInfo = [
     Logo: CPP,
   },
 ];
+
+interface NavItem {
+  title: string;
+  href: string;
+}
+
+export const navItems: NavItem[] = [
+  {
+    title: "Home",
+    href: "#",
+  },
+  {
+    title: "Skills",
+    href: "/#skills",
+  },
+  {
+    title: "Projects",
+    href: "/#projects",
+  },
+  {
+    title: "Contact",
+    href: "/#contact",
+  },
+];
