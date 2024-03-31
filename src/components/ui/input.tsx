@@ -6,8 +6,8 @@ export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
-    const radius = 100; // change this to increase the rdaius of the hover effect
+  ({ className, type, onChange, id }, ref) => {
+    const radius = 100;
     const [visible, setVisible] = React.useState(false);
 
     let mouseX = useMotionValue(0);
@@ -19,6 +19,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       mouseX.set(clientX - left);
       mouseY.set(clientY - top);
     }
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (onChange) {
+        onChange(e);
+      }
+    };
+
     return (
       <motion.div
         style={{
@@ -48,7 +55,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             className
           )}
           ref={ref}
-          {...props}
+          id={id}
+          onChange={handleChange}
         />
       </motion.div>
     );

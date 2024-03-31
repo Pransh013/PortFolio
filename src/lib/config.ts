@@ -130,3 +130,49 @@ export const navItems: NavItem[] = [
     href: "/#contact",
   },
 ];
+
+export interface User {
+  fullName: string;
+  email: string;
+  message: string;
+}
+
+interface social {}
+
+export const socials: NavItem[] = [
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/pransshhh/",
+  },
+  {
+    title: "GitHub",
+    href: "https://github.com/Pransh013",
+  },
+  {
+    title: "Twitter",
+    href: "https://twitter.com/pranshu98865108",
+  },
+  {
+    title: "Instagram",
+    href: "https://www.instagram.com/pransh.jsx/",
+  },
+];
+
+export const getTimeInAMPMFormat = () => {
+  const date: Date = new Date();
+  let hours: number | string = date.getHours();
+  let minutes: number | string = date.getMinutes();
+  let seconds: number | string = date.getSeconds();
+  const ampm: string = hours >= 12 ? "PM" : "AM";
+
+  hours = hours % 12;
+  hours = hours ? hours : 12; // '0' should be '12'
+
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  const timeInAMPM: string =
+    hours + " : " + minutes + " : " + seconds + " " + ampm;
+  return timeInAMPM;
+};
