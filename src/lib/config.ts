@@ -137,8 +137,6 @@ export interface User {
   message: string;
 }
 
-interface social {}
-
 export const socials: NavItem[] = [
   {
     title: "LinkedIn",
@@ -166,7 +164,7 @@ export const getTimeInAMPMFormat = () => {
   const ampm: string = hours >= 12 ? "PM" : "AM";
 
   hours = hours % 12;
-  hours = hours ? hours : 12; // '0' should be '12'
+  hours = hours ? hours : 12;
 
   hours = hours < 10 ? "0" + hours : hours;
   minutes = minutes < 10 ? "0" + minutes : minutes;
