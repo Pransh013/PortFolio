@@ -6,7 +6,7 @@ export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, onChange, id }, ref) => {
+  ({ className, type, onChange, id, name }, ref) => {
     const radius = 100;
     const [visible, setVisible] = React.useState(false);
 
@@ -57,6 +57,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={id}
           onChange={handleChange}
+          name={name}
         />
       </motion.div>
     );

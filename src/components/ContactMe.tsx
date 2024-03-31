@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useRef, useState } from "react";
+import { ChangeEvent, useRef, useState } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
@@ -6,11 +6,11 @@ import { Textarea } from "./ui/textarea";
 import emailjs from "@emailjs/browser";
 import { User } from "@/lib/config";
 import Loader from "./Loader";
-import { toast } from "./ui/use-toast";
+import { useToast } from "./ui/use-toast";
 
 const ContactMe = () => {
   const formRef = useRef<HTMLFormElement>(null);
-
+  const { toast } = useToast();
   const [form, setForm] = useState<User>({
     fullName: "",
     email: "",
@@ -22,18 +22,18 @@ const ContactMe = () => {
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { id, value } = e.target;
+    const { name, value } = e.target;
     setForm({
       ...form,
-      [id]: value,
+      [name]: value,
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    emailjs
-      .send(
+    try {
+      const res = await emailjs.send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
@@ -44,31 +44,30 @@ const ContactMe = () => {
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => {
-        setLoading(false);
-        setForm({
-          fullName: "",
-          email: "",
-          message: "",
-        });
-        toast({
-          title: "Thank you!!!",
-          description: "I will get back to you as soon as possible.",
-        });
-      })
-      .catch((error) => {
-        setLoading(false);
-        console.error(error);
+      );
 
-        alert("Ahh, something went wrong. Please try again.");
-        toast({
-          title: "Oops!!!",
-          description: "Something went wrong. Please try again.",
-          variant: 'destructive'
-        })
+      if (res.status !== 200) {
+        throw Error;
+      }
+      setForm({
+        fullName: "",
+        email: "",
+        message: "",
       });
-    setLoading(false);
+      toast({
+        title: "Thank you !!!",
+        description: "I will get back to you as soon as possible.",
+      });
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Oops !!!",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -81,6 +80,7 @@ const ContactMe = () => {
               onChange={handleChange}
               value={form.fullName}
               id="fullName"
+              name="fullName"
               type="text"
             />
           </LabelInputContainer>
@@ -90,13 +90,19 @@ const ContactMe = () => {
               onChange={handleChange}
               value={form.email}
               id="email"
+              name="email"
               type="email"
             />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="message">Your Message</Label>
-          <Textarea id="message" onChange={handleChange} value={form.message} />
+          <Textarea
+            id="message"
+            name="message"
+            onChange={handleChange}
+            value={form.message}
+          />
         </LabelInputContainer>
 
         <button

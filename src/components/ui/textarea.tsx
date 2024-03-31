@@ -6,7 +6,7 @@ export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, onChange, id }, ref) => {
+  ({ className, onChange, id, name }, ref) => {
     const radius = 200;
     const [visible, setVisible] = React.useState(false);
 
@@ -55,6 +55,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           ref={ref}
           onChange={handleChange}
           id={id}
+          name={name}
         />
       </motion.div>
     );

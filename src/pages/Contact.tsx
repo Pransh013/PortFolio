@@ -62,7 +62,7 @@ const Contact = () => {
       style={{
         backgroundImage,
       }}
-      className="relative h-screen overflow-hidden bg-transparent border text-white pt-12"
+      className="relative h-screen overflow-hidden bg-transparent text-white pt-12"
     >
       <motion.p
         {...skillsAnimate}
