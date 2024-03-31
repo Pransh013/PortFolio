@@ -1,14 +1,18 @@
 export const skillsAnimate = {
   initial: {
-    y: "-80%",
     opacity: 0,
+    y: -30,
   },
   transition: {
-    duration: 0.5,
-    delay: 0.5,
+    ease: "easeOut",
+    duration: 1,
+    // delay: 0.5,
   },
   whileInView: {
-    y: 0,
     opacity: 1,
+    y: 0,
+  },
+  exit: {
+    opacity: 0,
   },
 };
