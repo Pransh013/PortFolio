@@ -6,7 +6,7 @@ export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, onChange, id, name }, ref) => {
+  ({ className, ...props }, ref) => {
     const radius = 200;
     const [visible, setVisible] = React.useState(false);
 
@@ -18,12 +18,6 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       mouseX.set(clientX - left);
       mouseY.set(clientY - top);
     }
-
-    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-      if (onChange) {
-        onChange(e);
-      }
-    };
 
     return (
       <motion.div
@@ -53,9 +47,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
             className
           )}
           ref={ref}
-          onChange={handleChange}
-          id={id}
-          name={name}
+          {...props}
         />
       </motion.div>
     );
