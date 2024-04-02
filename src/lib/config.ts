@@ -1,4 +1,5 @@
 import Gemini from "../assets/Gemini.png";
+import SocialSync from "../assets/SocialSync.png";
 import HtmlLogo from "../assets/html.png";
 import CssLogo from "../assets/css-3.png";
 import JsLogo from "../assets/js.png";
@@ -18,7 +19,7 @@ const projects = [
   {
     title: "Gemini Clone",
     description:
-      "A Google Gemini clone built with React, TypeScript and Gemini API ",
+      "A Google Gemini clone built with React, TypeScript and Gemini API.",
     image: Gemini,
     liveDemoUrl: "https://gemini-clone-pr.vercel.app/",
     githubUrl: "https://github.com/Pransh013/Gemini-Clone",
@@ -31,11 +32,12 @@ const projects = [
     githubUrl: "https://github.com/Pransh013/Gemini-Clone",
   },
   {
-    title: "Gemini Clone",
-    description: "A google Gemini Clone built in React and TypeScript",
-    image: Gemini,
-    liveDemoUrl: "https://gemini-clone-pr.vercel.app/",
-    githubUrl: "https://github.com/Pransh013/Gemini-Clone",
+    title: "SocialSync",
+    description:
+      "A fully responsive social media app developed using ReactJS, TypeScript, Appwrite and TailwindCSS.",
+    image: SocialSync,
+    liveDemoUrl: "https://socialsyncc.vercel.app/",
+    githubUrl: "https://github.com/Pransh013/SocialSync",
   },
   {
     title: "Gemini Clone",
