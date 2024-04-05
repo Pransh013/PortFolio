@@ -14,6 +14,8 @@ import JavaSvg from "../assets/java.svg";
 import CPP from "../assets/cpp.svg";
 import PostgreSQL from "../assets/postgresql.svg";
 import Prisma from "../assets/prisma.svg";
+import Workers from "../assets/C_Workers.png";
+import Hono from "../assets/Hono.png";
 
 const projects = [
   {
@@ -52,18 +54,6 @@ export default projects;
 
 export const SkillsInfo = [
   {
-    name: "HTML",
-    Logo: HtmlLogo,
-  },
-  {
-    name: "CSS",
-    Logo: CssLogo,
-  },
-  {
-    name: "TailwindCSS",
-    Logo: TailwindSvg,
-  },
-  {
     name: "JavaScript",
     Logo: JsLogo,
   },
@@ -74,6 +64,10 @@ export const SkillsInfo = [
   {
     name: "ReactJS",
     Logo: ReactSvg,
+  },
+  {
+    name: "TailwindCSS",
+    Logo: TailwindSvg,
   },
   {
     name: "NodeJS",
@@ -94,6 +88,22 @@ export const SkillsInfo = [
   {
     name: "Prisma",
     Logo: Prisma,
+  },
+  {
+    name: "Cloudflare Workers",
+    Logo: Workers,
+  },
+  {
+    name: "Hono",
+    Logo: Hono,
+  },
+  {
+    name: "HTML",
+    Logo: HtmlLogo,
+  },
+  {
+    name: "CSS",
+    Logo: CssLogo,
   },
   {
     name: "Git",
