@@ -33,7 +33,7 @@ const SideBar = forwardRef<HTMLDivElement, HoverTextProps>((_, ref) => {
       }}
       animate={controls}
       initial={false}
-      className="bg-white m-2 gh-regular w-[30%] h-[98%] rounded-md fixed z-50 top-0 text-black right-0 mix-blend-difference flex items-center justify-center"
+      className="bg-white m-2 gh-regular w-[96.5%] sm:w-1/2 lg:w-1/3 xl:w-[28%] h-[98%] rounded-md fixed z-50 top-0 text-black right-0 mix-blend-difference flex items-center justify-center"
     >
       <div
         className="flex w-11/12 flex-col gap-16 justify-center items-center bg-white py-6"

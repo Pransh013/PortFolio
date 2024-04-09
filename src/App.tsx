@@ -23,7 +23,7 @@ const App = () => {
         <div className="absolute z-30">
           <SideBar ref={stickyText} />
         </div>
-        <div className="z-50 mix-blend-difference fixed right-10 top-5">
+        <div className="z-50 mix-blend-difference fixed -right-2 -top-1.5 sm:right-8 sm:top-2 lg:right-6 xl:right-10 lg:top-5">
           <MagneticEffect>
             <AnimatedHamBurger ref={stickyElement} />
           </MagneticEffect>

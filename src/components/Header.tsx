@@ -1,21 +1,16 @@
-import { useContext } from "react";
 import Resume from "../assets/Pranshu_Verma_resumeM.pdf";
-import { SideBarContext } from "@/contexts/SideBarContext";
 import { CloudDownload } from "lucide-react";
 
 const Header = () => {
-  const { isOpen } = useContext(SideBarContext);
   return (
     <div
-      className={`w-full gh-regular px-36 pr-60 flex justify-between items-center mix-blend-difference py-10 absolute ${
-        isOpen ? "z-20" : "z-30"
-      } `}
+      className={`w-5/6 lg:w-5/6 xl:w-11/12 gh-regular flex sm:px-4 lg:px-8 justify-between items-center mix-blend-difference py-4 sm:py-7 lg:py-10 `}
     >
-      <div className=" text-4xl mix-blend-difference text-white">
+      <div className="text-2xl md:text-4xl ml-4 sm:ml-10 lg:ml-16 mix-blend-difference text-white">
         Pranshu Verma
       </div>
       <a
-        className="text-2xl text-white flex items-center gap-3"
+        className="text-lg sm:text-xl lg:text-2xl text-white flex items-center gap-1 sm:gap-3"
         href={Resume}
         download
       >

@@ -31,7 +31,7 @@ const AnimatedHamBurger = forwardRef<HTMLDivElement, AnimatedHamBurgerProps>(
               x: "-50%",
               y: "-50%",
             }}
-            className="absolute h-1 w-10 z-50 bg-white rounded-sm"
+            className="absolute h-[3px] sm:h-1 w-[36px] z-50 bg-white rounded-sm"
             variants={{
               open: {
                 rotate: ["0deg", "0deg", "45deg"],
@@ -50,7 +50,7 @@ const AnimatedHamBurger = forwardRef<HTMLDivElement, AnimatedHamBurgerProps>(
               x: "-50%",
               y: "-50%",
             }}
-            className="absolute h-1 w-10 z-50 bg-white rounded-sm"
+            className="absolute h-[3px] sm:h-1 w-[36px] z-50 bg-white rounded-sm"
             variants={{
               open: {
                 rotate: ["0deg", "0deg", "-45deg"],
@@ -62,12 +62,12 @@ const AnimatedHamBurger = forwardRef<HTMLDivElement, AnimatedHamBurgerProps>(
           />
           <motion.span
             style={{
-              left: "calc(50% + 10px)",
+              left: "calc(50% + 9px)",
               bottom: "35%",
               x: "-50%",
               y: "50%",
             }}
-            className="absolute h-1 w-5 z-50 bg-white rounded-sm"
+            className="absolute h-[2.5px] sm:h-1 w-[18px] z-50 bg-white rounded-sm"
             variants={{
               open: {
                 rotate: ["0deg", "0deg", "45deg"],
@@ -78,7 +78,7 @@ const AnimatedHamBurger = forwardRef<HTMLDivElement, AnimatedHamBurgerProps>(
               closed: {
                 rotate: ["45deg", "0deg", "0deg"],
                 bottom: ["50%", "50%", "35%"],
-                left: "calc(50% + 10px)",
+                left: "calc(50% + 9px)",
               },
             }}
           />

@@ -93,12 +93,12 @@ export const SkillsInfo = [
     Logo: Prisma,
   },
   {
-    name: "Cloudflare Workers",
-    Logo: Workers,
-  },
-  {
     name: "Hono",
     Logo: Hono,
+  },
+  {
+    name: "Cloudflare Workers",
+    Logo: Workers,
   },
   {
     name: "HTML",

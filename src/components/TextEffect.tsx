@@ -29,7 +29,7 @@ const TextEffect = ({ children }: { children: string }) => {
         if (!isPlaying) rubberBand();
       }}
       onAnimationComplete={() => setIsPlaying(false)}
-      className="inline-block text-5xl font-semibold text-black dark:text-white mix-blend-difference transition-colors"
+      className="inline-block text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold text-black dark:text-white mix-blend-difference transition-colors"
     >
       {children}
     </motion.span>

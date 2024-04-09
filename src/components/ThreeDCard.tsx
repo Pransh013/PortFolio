@@ -14,8 +14,8 @@ export function ThreeDCard({
   githubUrl: string;
 }) {
   return (
-    <CardContainer className="w-[35rem]">
-      <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black   dark:border-white/[0.4] border-black/[0.5] w-auto sm:w-[24rem] h-[23rem] rounded-xl px-4 py-3 border">
+    <CardContainer className="w-[21rem] lg:w-[24rem]">
+      <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black   dark:border-white/[0.4] border-black/[0.5] w-full h-fit rounded-xl px-2 lg:px-4 py-2 sm:py-3 border">
         <CardItem
           translateZ="50"
           className="w-full gh-regular text-xl font-bold text-neutral-600 text-center dark:text-white"
@@ -31,16 +31,20 @@ export function ThreeDCard({
         </CardItem>
         <CardItem
           translateZ="100"
-          className="w-full mt-2 rounded-md border overflow-hidden dark:border-white/[0.2] border-black/[0.2]"
+          className="w-full mt-2 rounded-md lg:border overflow-hidden dark:border-white/[0.2] border-black/[0.2]"
         >
           <img
             src={image}
-            className="h-48 w-full object-cover rounded-md group-hover/card:shadow-xl"
+            className="h-44 sm:h-48 w-[95%] mx-auto lg:w-full object-cover rounded-md group-hover/card:shadow-xl"
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-5">
-          <a href={liveDemoUrl} target="__blank" className="w-32 ml-6 h-10">
+        <div className="flex justify-between items-center mt-4 sm:mt-5">
+          <a
+            href={liveDemoUrl}
+            target="__blank"
+            className="w-28 lg:w-32 ml-6 h-9 sm:h-10"
+          >
             <CardItem
               translateZ={20}
               className="w-full h-full flex items-center justify-center rounded-md bg-[#525252] dark:bg-white dark:text-black text-white text-sm font-bold"
@@ -48,7 +52,11 @@ export function ThreeDCard({
               Go live
             </CardItem>
           </a>
-          <a href={githubUrl} target="__blank" className="w-32 mr-6 h-10">
+          <a
+            href={githubUrl}
+            target="__blank"
+            className="w-28 lg:w-32 mr-6 h-9 sm:h-10"
+          >
             <CardItem
               translateZ={20}
               className="w-full h-full flex items-center justify-center rounded-md bg-[#525252] dark:bg-white dark:text-black text-white text-sm font-bold"

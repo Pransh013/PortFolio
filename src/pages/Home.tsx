@@ -5,10 +5,13 @@ import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { forwardRef } from "react";
 
+
+
 const sentences = [
   "Hello, I'm Pranshu Verma, ",
   "a frontend developer with a passion ",
-  "for crafting pixel-perfect experiences.",
+  "for crafting pixel-perfect ",
+  "experiences.",
 ];
 
 interface HoverTextProps {}
@@ -22,13 +25,13 @@ const Home = forwardRef<HTMLParagraphElement, HoverTextProps>((_, ref) => {
         </Canvas>
       </div>
       <Header />
-      <div className="px-24 w-full h-full absolute z-20 flex items-center gap-24">
-        <div className="h-full">
+      <div className="lg:px-20 xl:px-[84px] w-full h-full absolute z-20 top-0 flex lg:flex-row flex-col justify-center items-center gap-16 lg:gap-20">
+        <div>
           <ProfileCard />
         </div>
         <p
           ref={ref}
-          className="text-white mix-blend-difference flex-1 max-w-fit"
+          className="text-white text-center lg:text-left mix-blend-difference lg:flex-1 max-w-fit"
         >
           {sentences.map((sentence, idx) => (
             <React.Fragment key={idx}>

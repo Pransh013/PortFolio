@@ -79,9 +79,9 @@ const ContactMe = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(handleSubmit)}
-        className="w-full rounded-none md:rounded-2xl p-4 md:p-6 inset-0"
+        className="w-full rounded-lg md:rounded-2xl p-1 sm:p-3 lg:p-6 inset-0"
       >
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+        <div className="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-2 mb-1 sm:mb-2 lg:mb-4">
           <LabelInputContainer>
             <FormField
               control={form.control}
@@ -113,7 +113,7 @@ const ContactMe = () => {
             />
           </LabelInputContainer>
         </div>
-        <LabelInputContainer className="mb-8">
+        <LabelInputContainer className="mb-2 sm:mb-5 lg:mb-8">
           <FormField
             control={form.control}
             name="message"
@@ -129,7 +129,7 @@ const ContactMe = () => {
           />
         </LabelInputContainer>
         <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-800 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-1/2 text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-800 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full lg:w-1/2 text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
           {loading ? (
@@ -163,7 +163,7 @@ const LabelInputContainer = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col space-y-2 w-full", className)}>
+    <div className={cn("flex flex-col space-y-0 md:space-y-2 sm:w-full", className)}>
       {children}
     </div>
   );
