@@ -16,6 +16,7 @@ import PostgreSQL from "../assets/postgresql.svg";
 import Prisma from "../assets/prisma.svg";
 import Workers from "../assets/C_Workers.png";
 import Hono from "../assets/Hono.png";
+import Swiggy from "../assets/Swiggy.png";
 
 const projects = [
   {
@@ -28,22 +29,24 @@ const projects = [
   },
   {
     title: "Swiggy Clone",
-    description: "A google Gemini Clone built in React and TypeScript",
-    image: Gemini,
-    liveDemoUrl: "https://gemini-clone-pr.vercel.app/",
-    githubUrl: "https://github.com/Pransh013/Gemini-Clone",
+    description:
+      "A Swiggy frontend clone built using ReactJS, TailwindCSS and Zustand for state management.",
+    image: Swiggy,
+    liveDemoUrl: "https://swiggyyy.vercel.app/",
+    githubUrl: "https://github.com/9xVibee/SwiggyyyClone",
   },
   {
     title: "SocialSync",
     description:
-      "A fully responsive social media app developed using ReactJS, TypeScript, Appwrite and TailwindCSS.",
+      "A social media app developed using React, TypeScript, Appwrite, Tanstack Query and TailwindCSS.",
     image: SocialSync,
     liveDemoUrl: "https://socialsyncc.vercel.app/",
     githubUrl: "https://github.com/Pransh013/SocialSync",
   },
   {
     title: "Gemini Clone",
-    description: "A google Gemini Clone built in React and TypeScript",
+    description:
+      "A google Gemini Clone built in ReactJS, TailwindCSS and TypeScript",
     image: Gemini,
     liveDemoUrl: "https://gemini-clone-pr.vercel.app/",
     githubUrl: "https://github.com/Pransh013/Gemini-Clone",
