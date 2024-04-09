@@ -16,7 +16,7 @@ import PostgreSQL from "../assets/postgresql.svg";
 import Prisma from "../assets/prisma.svg";
 import Workers from "../assets/C_Workers.png";
 import Hono from "../assets/Hono.png";
-import Swiggy from "../assets/Swiggy.png";
+import SwiggyImg from "../assets/SwiggyImg.png";
 
 const projects = [
   {
@@ -31,7 +31,7 @@ const projects = [
     title: "Swiggy Clone",
     description:
       "A Swiggy frontend clone built using ReactJS, TailwindCSS and Zustand for state management.",
-    image: Swiggy,
+    image: SwiggyImg,
     liveDemoUrl: "https://swiggyyy.vercel.app/",
     githubUrl: "https://github.com/9xVibee/SwiggyyyClone",
   },
